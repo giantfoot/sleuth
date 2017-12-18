@@ -1,0 +1,22 @@
+dependencies {
+    //compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    //compile 'io.zipkin.java:zipkin-server'
+    //compile 'io.zipkin.java:zipkin-autoconfigure-ui'
+    //compile 'org.springframework.cloud:spring-cloud-starter-zipkin'
+
+    compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.springframework.cloud:spring-cloud-sleuth-zipkin-stream')
+    compile('org.springframework.cloud:spring-cloud-starter-stream-rabbit')
+    compile('org.springframework.boot:spring-boot-starter')
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    //compile 'io.zipkin.java:zipkin-server'
+    compile 'io.zipkin.java:zipkin-autoconfigure-ui'
+    compile 'io.zipkin.java:zipkin'
+    compile 'io.zipkin.java:zipkin-autoconfigure-storage-elasticsearch-http:1.28.1'
+    //compile 'org.springframework.cloud:spring-cloud-starter-zipkin'
+    //compile 'mysql:mysql-connector-java'
+    //compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+

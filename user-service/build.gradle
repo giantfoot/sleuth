@@ -1,0 +1,11 @@
+dependencies {
+	compile('org.springframework.cloud:spring-cloud-starter-eureka')
+	//compile('org.springframework.cloud:spring-cloud-starter-zipkin')
+	compile('org.springframework.cloud:spring-cloud-sleuth-zipkin-stream')
+	compile('org.springframework.cloud:spring-cloud-starter-stream-rabbit')
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-actuator')
+	compile 'org.projectlombok:lombok'
+    compile('org.springframework.boot:spring-boot-starter-test')
+}

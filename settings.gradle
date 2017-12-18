@@ -1,0 +1,6 @@
+rootProject.name = 'sleuth'
+include 'server'
+include 'zipkin-server'
+include 'user-service'
+include 'gateway-service'
+
