@@ -1,8 +1,9 @@
 package com.sleuth.userservice.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author yy.zhang yangyang.zhang@anxincloud.com
@@ -11,9 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RequestMapping("/user")
 @RestController
+@Api(value = "test-UserController", description = "test")
 public class UserController {
-    @GetMapping("hi")
-    public String hi() {
-        return "hi,how are you!";
+    @RequestMapping(value = "/hi/{name}", method = RequestMethod.GET)
+    @ApiOperation(value = "hi", notes = "hi-method")
+    @ApiImplicitParam(name = "name", value = "name", required = true, dataType = "String", paramType = "path")
+    public String hi(@PathVariable String name) {
+        return "hi,how are you!" + name;
     }
 }
